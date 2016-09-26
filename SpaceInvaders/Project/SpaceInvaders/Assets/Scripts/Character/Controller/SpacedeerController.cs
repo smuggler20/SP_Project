@@ -25,6 +25,7 @@ namespace SpaceInvaders.Character.Controller
 
             spacedeer.transform.FindChild("Body").GetComponent<SpriteRenderer>().sprite = spacedeerSprite;
             spacedeer.transform.position = position;
+            spacedeer.transform.FindChild("Body").transform.localScale *= 5;
             spacedeer.gameObject.AddComponent<SpacedeerViewPresenter>();
             spacedeer.gameObject.AddComponent<BoxCollider2D>();
             spacedeer.tag = "Enemy";
